@@ -1,6 +1,6 @@
 {
-  "name": "@squareboat/nest-storage",
-  "version": "0.1.6",
+  "name": "@kshiro/nest-storage",
+  "version": "0.0.3",
   "description": "Multi disk multi driver storage manager for NestJS 💿💾",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/squareboat/nestjs-storage.git"
+    "url": "git+https://github.com/squareboat/nestjs-storage.git"
   },
   "bugs": {
     "url": "https://github.com/squareboat/nestjs-storage/issues"
@@ -45,5 +45,8 @@
   "peerDependencies": {
     "@nestjs/common": "^6.7.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0",
     "@nestjs/core": "^6.7.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
