@@ -88,7 +88,7 @@ export class Local implements StorageDriver {
   url(fileName: string) {
     if (this.config.hasOwnProperty("baseUrl")) {
       const filePath = join("public", fileName);
-      return `${this.config.basePath}/${filePath}`;
+      return `${this.config.baseUrl}/${filePath}`;
     } else {
       return "";
     }
