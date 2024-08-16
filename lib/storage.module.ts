@@ -28,16 +28,16 @@ export class StorageModule {
     return {
       global: true,
       module: StorageModule,
-      imports: options.imports || [], // Let the consumer decide the imports
+      imports: options.imports || [],
       providers: [
-        this.createStorageOptionsProvider(options),
         StorageService,
+        this.createAsyncOptionsProvider(options),
       ],
       exports: [StorageService],
     };
   }
 
-  private static createStorageOptionsProvider(
+  private static createAsyncOptionsProvider(
     options: StorageAsyncOptions,
   ): Provider {
     if (options.useFactory) {
@@ -49,7 +49,7 @@ export class StorageModule {
     }
 
     const inject = [
-      (options.useClass || options.useExisting) as Type<StorageOptions>,
+      (options.useClass || options.useExisting) as unknown as Type<StorageOptionsFactory>,
     ];
 
     return {
