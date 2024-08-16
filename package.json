@@ -1,6 +1,6 @@
 {
   "name": "@kshiro/nest-storage",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "Multi disk multi driver storage manager for NestJS 💿💾",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
