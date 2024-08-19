@@ -85,10 +85,10 @@ export class Local implements StorageDriver {
    *
    * @param path
    */
-  url(fileName: string) {
+  url(path: string) {
     if (this.config.hasOwnProperty("baseUrl")) {
-      const filePath = join("public", fileName);
-      return `${this.config.basePath}/${filePath}`;
+      const normalizedPath = path.replace(/\\/g, "/");
+      return `${this.config.baseUrl}/${normalizedPath}`;
     } else {
       return "";
     }
