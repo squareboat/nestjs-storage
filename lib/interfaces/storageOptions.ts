@@ -10,6 +10,7 @@ export interface DiskOptions {
   accessKey?: string;
   secretKey?: string;
   fetchRemoteCredentials?: boolean;
+  baseUrl?: string;
 }
 
 export interface StorageOptions {
